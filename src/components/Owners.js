@@ -2,9 +2,10 @@ import React from 'react'
 
 const Owners = (props) => {
 
+console.log(props)
     return (
         <div>
-            Owners
+            {props.owners.map(owner => <li key={owner.id}>{owner.name} - {owner.email}</li>)}
         </div>
 
     )

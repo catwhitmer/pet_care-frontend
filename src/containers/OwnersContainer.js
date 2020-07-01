@@ -14,7 +14,7 @@ class OwnersContainer extends React.Component {
     render() {
         return (
             <div>
-                <OwnerForm />
+                <OwnerForm /><br></br>
                 <Owners owners={this.props.owners}/>
             </div>
         )

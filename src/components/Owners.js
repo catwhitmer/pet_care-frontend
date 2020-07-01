@@ -1,11 +1,13 @@
 import React from 'react'
+import Owner from './Owner'
 
 const Owners = (props) => {
 
 console.log(props)
     return (
         <div>
-            {props.owners.map(owner => <li key={owner.id}>{owner.name} - {owner.email}</li>)}
+            {props.owners.map(owner => 
+            <div key={owner.id}><Owner owner={owner} /></div>)}
         </div>
 
     )

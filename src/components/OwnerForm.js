@@ -18,6 +18,10 @@ class OwnerForm extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.props.addOwner(this.state)
+        this.setState({
+            name: '',
+            email: ''
+        })
     }
 
     render() {

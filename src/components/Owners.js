@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link } from 'react-router-dom'
 import Owner from './Owner'
 
 const Owners = (props) => {
@@ -6,8 +7,11 @@ const Owners = (props) => {
 console.log(props)
     return (
         <div>
+        Click your name to Sign In 
             {props.owners.map(owner => 
-            <div key={owner.id}><Owner owner={owner} /></div>)}
+                <li key={owner.id}>
+                    <Link to={`/owners/${owner.id}`}> {owner.name} </Link> - {owner.email}
+                </li>)}
         </div>
 
     )

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
+import PetsContainer from '../containers/PetsContainer'
+
 
 const Owner = (props) => {
 
@@ -10,10 +12,11 @@ let owner = props.owners[props.match.params.id - 1]
 
     return (
       <div>
-      Welcome!
-        <li>
-          {owner ? owner.name : null} - {owner ? owner.email : null}
-        </li>
+        <h2>
+          Welcome!
+          {owner ? owner.name : null}
+        </h2>
+        <PetsContainer  owner={owner}/>
       </div>
     )
 }

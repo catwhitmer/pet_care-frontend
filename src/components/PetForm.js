@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addPet } from '../actions/addPet'
 
 
 class PetForm extends React.Component {
@@ -20,7 +21,7 @@ class PetForm extends React.Component {
     
     handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.addPet(this.state)
+        this.props.addPet(this.state, this.props.owner.id)
         this.setState({
             name: '',
             kind: '',
@@ -50,4 +51,4 @@ class PetForm extends React.Component {
     }
 }
 
-export default connect(null)(PetForm)
+export default connect(null, { addPet })(PetForm)

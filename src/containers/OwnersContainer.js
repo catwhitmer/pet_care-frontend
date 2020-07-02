@@ -17,7 +17,7 @@ class OwnersContainer extends React.Component {
         return (
             <div>
                 <Route exact path='/owners/new' component={OwnerForm} />
-                <Route path='/owners/:id' render={(routerProps) => <Owners {...routerProps} owners={this.props.owners}/>} />
+                <Route path='/owners/:id' render={(routerProps) => <Owner {...routerProps} owners={this.props.owners}/>} />
                 <Route exact path='/owners' render= {(routerProps) => <Owners {...routerProps} owners={this.props.owners}/>} />
                 
             </div>

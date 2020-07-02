@@ -6,15 +6,14 @@ import PetsContainer from '../containers/PetsContainer'
 
 const Owner = (props) => {
 
-console.log(props)
 
-let owner = props.owners[props.match.params.id - 1]
+let owner = props.owners.filter(owner => owner.id == props.match.params.id)[0]
 
     return (
       <div>
         <h2>
-          Welcome!
-          {owner ? owner.name : null}
+          Welcome
+          {owner ? owner.name : null}!
         </h2>
         <PetsContainer  owner={owner}/>
       </div>

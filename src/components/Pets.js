@@ -10,14 +10,15 @@ const Pets = (props) => {
         props.deletePet(pet.id, pet.owner_id)
     }
         return (
-            <h2>My Pets
-                <h3>
-                    {props.pets && props.pets.map(pet => 
-                        <li key={pet.id}><Link to={`/owners/${props.owner.id}/pets/${pet.id}`}> {pet.name} </Link> - Kind: {pet.kind} - Age: {pet.age} - Breed: {pet.breed} 
-                        <button onClick={() => handleDelete(pet)}>Delete</button></li>
-                    )}
-                </h3>
-            </h2>
+            <div>
+                <h2>My Pets</h2>
+                    <h3>
+                        {props.pets && props.pets.map(pet => 
+                            <li key={pet.id}><Link to={`/owners/${props.owner.id}/pets/${pet.id}`}> {pet.name} </Link> - Kind: {pet.kind} - Age: {pet.age} - Breed: {pet.breed} 
+                            <button onClick={() => handleDelete(pet)}>Delete</button></li>
+                        )}
+                    </h3>
+          </div>
         )
 }
 

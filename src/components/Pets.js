@@ -11,13 +11,13 @@ const Pets = (props) => {
     }
 console.log(props)
         return (
-            <div>
-            My Pets
+            <h3>
+            <h2>My Pets</h2>
                 {props.pets && props.pets.map(pet => 
-                    <li key={pet.id}><Link to={`/owners/${props.owner.id}/pets/${pet.id}`}> {pet.name} </Link> - Kind:{pet.kind} - Age:{pet.age} - Breed:{pet.breed} 
+                    <li key={pet.id}><Link to={`/owners/${props.owner.id}/pets/${pet.id}`}> {pet.name} </Link> - Kind: {pet.kind} - Age: {pet.age} - Breed: {pet.breed} 
                     <button onClick={() => handleDelete(pet)}>Delete</button></li>
                 )}
-            </div>
+            </h3>
         )
 }
 

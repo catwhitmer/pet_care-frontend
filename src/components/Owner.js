@@ -12,11 +12,9 @@ let owner = props.owners && props.owners.filter(owner => owner.id == props.match
 
     return (
       <div>
-        <h2>
-          <h1>Welcome {owner ? owner.name : null}!</h1>
-        </h2>
-        <PetsContainer  owner={owner}/>
-        <TodosContainer owner={owner}/>
+        <h1>Welcome {owner ? owner.name : null}!</h1>
+          <PetsContainer  owner={owner}/>
+          <TodosContainer owner={owner}/>
       </div>
     )
 }

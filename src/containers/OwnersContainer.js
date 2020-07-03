@@ -8,7 +8,7 @@ import PetForm from '../components/PetForm'
 import Owners from '../components/Owners'
 import Owner from '../components/Owner'
 import Pets from '../components/Pets'
-/*import Pet from '../components/Pet'*/
+import RenderPetForm from '../components/RenderPetForm'
 
 class OwnersContainer extends React.Component {
 

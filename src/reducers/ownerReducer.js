@@ -21,6 +21,14 @@ export default function ownerReducer(state = {owners: []}, action) {
                      return owner
                  }
              })}
+        case 'ADD_TODO':
+             return {...state, owners: state.owners.map(owner => {
+                 if (owner.id === action.payload) {
+                     return action.payload
+                 } else {
+                     return owner
+                 }
+             })}
 
         default:
             return state

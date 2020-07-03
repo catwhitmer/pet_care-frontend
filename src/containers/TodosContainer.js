@@ -7,7 +7,7 @@ class TodosContainer extends React.Component {
     render() {
         return (
             <div>
-                <TodoForm />
+                <TodoForm todos={this.props.owner} owner={this.props.owner}/>
                 <Todos todos={this.props.owner && this.props.owner.todos}/>
             </div>
         )

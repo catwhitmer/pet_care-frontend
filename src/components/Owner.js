@@ -7,7 +7,7 @@ import PetsContainer from '../containers/PetsContainer'
 const Owner = (props) => {
 
 
-let owner = props.owners.filter(owner => owner.id == props.match.params.id)[0]
+let owner = props.owners && props.owners.filter(owner => owner.id == props.match.params.id)[0]
 
     return (
       <div>

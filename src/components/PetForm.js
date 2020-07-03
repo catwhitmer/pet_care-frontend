@@ -33,9 +33,9 @@ class PetForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <h3>
                 <form onSubmit={this.handleOnSubmit}>
-                Add A New Pet here! <br></br>
+                <h1>Add A New Pet</h1> <br></br>
                     <label>Pet Name:</label>
                     <input type='text' name='name' value={this.state.name} onChange={this.hanldeOnChange}/><br></br>
                     <label>Pet Kind:</label>
@@ -46,7 +46,7 @@ class PetForm extends React.Component {
                     <input type='text' name='breed' value={this.state.breed} onChange={this.hanldeOnChange} /><br></br>
                     <input type='submit' />
                 </form>
-            </div>
+            </h3>
         )
     }
 }

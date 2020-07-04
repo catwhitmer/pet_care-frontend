@@ -9,7 +9,7 @@ const Owners = (props) => {
             <h3 className='owners'></h3>
                 <h1>Click your name to Sign In!</h1>
                     {props.owners.map(owner => 
-                    <li key={owner.id}><Link to={`/owners/${owner.id}`}> {owner.name} </Link> - {owner.email} </li>)}
+                    <div key={owner.id}><Link to={`/owners/${owner.id}`}> {owner.name} </Link> - {owner.email} </div>)}
         </div>
     )
 }

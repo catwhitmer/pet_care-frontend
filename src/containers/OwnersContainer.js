@@ -9,6 +9,7 @@ import Owners from '../components/Owners'
 import Owner from '../components/Owner'
 import Pets from '../components/Pets'
 import RenderPetForm from '../components/RenderPetForm'
+import NavBar from '../components/NavBar'
 
 class OwnersContainer extends React.Component {
 
@@ -19,6 +20,7 @@ class OwnersContainer extends React.Component {
     render() {
         return (
             <div>
+            <NavBar />
                 <Switch>
                     <Route path='/owners/new' component={OwnerForm} />
                     <Route path='/owners/:id/pets/new' component={PetForm} />

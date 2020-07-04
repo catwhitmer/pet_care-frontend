@@ -6,29 +6,29 @@ export default function ownerReducer(state = {owners: []}, action) {
         case 'ADD_OWNER':
             return {...state, owners: [...state.owners, action.payload]}
         case 'ADD_PET':
-             let owners = state.owners.map(owner => {
-                 if(owner.id === action.payload.id) {
+              return {...state, owners: state.owners.map(owner => {
+                 if (owner.id === action.payload) {
                      return action.payload
-                 }   else {
+                 } else {
                      return owner
                  }
-             })
+             })}
         case 'DELETE_PET':
-             let owners2 = state.owners.map(owner => {
-                 if(owner.id === action.payload.id) {
+            return {...state, owners: state.owners.map(owner => {
+                 if (owner.id === action.payload) {
                      return action.payload
-                 }   else {
+                 } else {
                      return owner
                  }
-             })
+             })}
         case 'ADD_TODO':
-              let owners3 = state.owners.map(owner => {
-                 if(owner.id === action.payload.id) {
+             return {...state, owners: state.owners.map(owner => {
+                 if (owner.id === action.payload) {
                      return action.payload
-                 }   else {
+                 } else {
                      return owner
                  }
-             })
+             })}
 
         default:
             return state

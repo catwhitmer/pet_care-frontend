@@ -5,7 +5,7 @@ export const deletePet = (petId, ownerId) => {
             method: 'DELETE'
         })
         .then(resp => resp.json())
-        .then(pet = dispatch({type: 'DELETE_PET', payload: pet}))
+        .then(owner = dispatch({type: 'DELETE_PET', payload: owner}))
     }
 }
 

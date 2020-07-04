@@ -3,7 +3,6 @@ import TodoForm from './TodoForm'
 
 const Todos = (props) => {
 
-    console.log(props.todos)
     return (
         <div>
             <h2>To-Dos</h2>

@@ -45,3 +45,13 @@
   text-align: justify;
   color: lightcoral;
 }
+
+.pets-container {
+  padding-left: 400px;
+  padding-right: 400px;
+  text-align: left;
+}
+
+.pet-form {
+  text-align: center;
+}

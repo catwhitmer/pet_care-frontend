@@ -20,10 +20,10 @@ const Pets = (props) => {
                                 Breed: {pet.breed}<br />
                                 Age: {pet.age}<br />
                                 <button onClick={() => handleDelete(pet)}>Delete</button>
-                                <hr />
+                                <hr />                  
                             </div>
-                        )}
-                    </h3>
+                        )}                      
+                    </h3>            
           </div>
         )
 }

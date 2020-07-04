@@ -5,7 +5,7 @@ const Todos = (props) => {
 
     return (
         <div>
-            <h2>To-Dos</h2>
+            <h1>To-Dos</h1>
                 <h3>
                     {props.todos && props.todos.map(todo =>
                         <li key={todo.id}>{todo.description} - {todo.notes}</li>

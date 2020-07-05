@@ -7,9 +7,9 @@ import OwnerForm from '../components/OwnerForm'
 import PetForm from '../components/PetForm'
 import Owners from '../components/Owners'
 import Owner from '../components/Owner'
-import Pets from '../components/Pets'
+import pets from '../components/Pets'
+import Pet from '../components/Pet'
 import Home from '../components/Home'
-import RenderPetForm from '../components/RenderPetForm'
 import NavBar from '../components/NavBar'
 
 class OwnersContainer extends React.Component {
@@ -23,11 +23,11 @@ class OwnersContainer extends React.Component {
             <div>
             <NavBar />
                 <Switch>
-                    <Route path='/owners/:id' render={(routerProps) => <Owner {...routerProps} owners={this.props.owners}/>} />
-                    <Route path='/owners' render= {(routerProps) => <Owners {...routerProps} owners={this.props.owners}/>} />
-                    <Route path='/owners/:id/pets/' render= {(routerProps) => <Owners {...routerProps} owners={this.props.owners}/>} />
                     <Route path='/owners/new' component={OwnerForm} />
                     <Route path='/owners/:id/pets/new' component={PetForm} />
+                    <Route path='/owners/:id' render={(props) => <Owner {...props} owners={this.props.owners}/>} />
+                    <Route path='/owners' render= {(props) => <Owners {...props} owners={this.props.owners}/>} />
+                    <Route path='/owners/:id/pets/:id' render= {(props) => <Owners {...props} owners={this.props.owners}/>} /> 
                     <Route path='/' component={Home} />
                 </Switch>
             </div>

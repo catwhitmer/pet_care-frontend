@@ -1,6 +1,7 @@
 import React from 'react'
 import PetForm from '../components/PetForm'
 import Pets from '../components/Pets'
+import Pet from '../components/Pet'
 
 
 class PetsContainer extends React.Component {

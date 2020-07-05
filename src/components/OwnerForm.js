@@ -28,9 +28,9 @@ class OwnerForm extends React.Component {
         return(
             <h3>
                 <form onSubmit={this.handleOnSubmit}>
-                    <label>Owner Name</label>
+                    <label>Name</label>
                     <input type="text" placeholder='Name' value={this.state.name} name='name' onChange={this.handleOnChange} /><br></br>
-                    <label>Owner Email</label>
+                    <label>Email</label>
                     <input type="text" placeholder='Email' value={this.state.email} name='email' onChange={this.handleOnChange} /><br></br>
                     <input type='Submit' /> 
                 </form>

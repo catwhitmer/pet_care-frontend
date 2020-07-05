@@ -22,7 +22,7 @@ const Pets = (props) => {
                                 Age: {pet.age}<br />
                                 <button onClick={() => handleDelete(pet)}>Delete</button>
                                 <hr />  
-                                <Link to={`/owners/${pet.owner_id}/pets/${pet.id}/todos/${pet.todos_id}`}> Your pet's To-Dos </Link><br />     
+                                <Link to={`/owners/${pet.owner_id}/pets/${pet.id}/todos`}> Your pet's To-Dos </Link><br />     
                                 <hr />           
                             </div>
                         )}                      

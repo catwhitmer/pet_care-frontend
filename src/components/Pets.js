@@ -16,12 +16,14 @@ const Pets = (props) => {
                     <h3 className='pets-container'>
                         {props.pets && props.pets.map(pet => 
                             <div key={pet.id}> 
-                                Name: <Link to={`/owners/${pet.owner_id}/pets/${pet.id}`}> {pet.name} </Link><br />
+                                Name: {pet.name}<br />
                                 Kind: {pet.kind}<br />
                                 Breed: {pet.breed}<br />
                                 Age: {pet.age}<br />
                                 <button onClick={() => handleDelete(pet)}>Delete</button>
-                                <hr />                  
+                                <hr />  
+                                <Link to={`/owners/${pet.owner_id}/pets/${pet.id}/todos/${pet.todos_id}`}> Your pet's To-Dos </Link><br />     
+                                <hr />           
                             </div>
                         )}                      
                     </h3>            

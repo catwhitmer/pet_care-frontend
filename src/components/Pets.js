@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { deletePet } from '../actions/deletePet'
 import { Route, Link } from 'react-router-dom'
+import Pet from '../components/Pet'
 
 
 const Pets = (props) => {
@@ -15,7 +16,7 @@ const Pets = (props) => {
                     <h3 className='pets-container'>
                         {props.pets && props.pets.map(pet => 
                             <div key={pet.id}> 
-                                Name: {pet.name}<br />
+                                Name: <Link to={`/owners/${pet.owner_id}/pets/${pet.id}`}> {pet.name} </Link><br />
                                 Kind: {pet.kind}<br />
                                 Breed: {pet.breed}<br />
                                 Age: {pet.age}<br />

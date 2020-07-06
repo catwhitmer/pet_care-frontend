@@ -3,6 +3,7 @@ import { connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import TodosContainer from '../containers/TodosContainer'
+import TodoForm from '../components/TodoForm'
 
 
 const Todos = (props) => {
@@ -17,9 +18,12 @@ const Todos = (props) => {
         <div>
         <h1>To-Dos</h1>
             {props.owners.length  > 0 ? findTodos().map(todo => 
-                <li> {todo.description} - {todo.notes} </li>) : null}<br />
+                <li key={todo.id}> {todo.description} - {todo.notes} </li>) : null}
+                <button onClick={() => handleEdit(pet)}>Edit</button>
+                <button onClick={() => handleDelete(pet)}>Delete</button>
+                <br />
                 <hr />
-                <Link to={`/owners/${props.match.params.owner_id}/pets/${props.match.params.id}/todos/new`}> Create a New To-Do! </Link>
+                 <TodoForm todos={props.owners}/> 
         </div>
     )
 }

@@ -17,7 +17,7 @@ class TodoForm extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.addTodo(this.state, this.props.owner.id, this.props.todos.id)
+        this.props.addTodo(this.state, this.props.owner.id, this.props.owners.todos.id)
         this.setState({
             description: '',
             notes: ''
@@ -28,7 +28,7 @@ class TodoForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleOnSubmit}>
-                <h1>Add a New To-do</h1>
+                <h1>Add a New To-Do</h1>
                     <label>description</label>
                     <input type='text' name='description' value={this.state.description} onChange={this.handleOnChange} /><br />
                     <label>notes</label>

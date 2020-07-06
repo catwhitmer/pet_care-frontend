@@ -25,7 +25,7 @@ class OwnersContainer extends React.Component {
                 <Switch>
                     <Route exact path='/owners/new' component={OwnerForm} />
                     <Route exact path='/owners/:id/pets/new' component={PetForm} />
-                    <Route exact path='/pets/:id/todos' render={(props) => <Todos {...props} owners={this.props.owners}/>}/>
+                    <Route exact path='/owners/:owner_id/pets/:id/todos' render={(props) => <Todos {...props} owners={this.props.owners}/>}/>
                     <Route exact path='/owners/:id' render={(props) => <Owner {...props} owners={this.props.owners}/>} />
                     <Route exact path='/owners' render= {(props) => <Owners {...props} owners={this.props.owners}/>} />      
                     <Route exact path='/' component={Home} />

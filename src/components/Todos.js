@@ -7,7 +7,6 @@ const Todos = (props) => {
     return (
         <div>
             <h1>To-Dos</h1>
-          
         </div>
     )
 }

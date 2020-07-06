@@ -1,7 +1,7 @@
 export const addPet = (pet, ownerId) => {
 
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/owners/${ownerId}/pets`, {
+        fetch(`http://localhost:3001/api/v1/owners/${ownerId}/pets`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

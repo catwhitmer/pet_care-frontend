@@ -9,6 +9,10 @@ const Pets = (props) => {
     const handleDelete = (pet) => {
         props.deletePet(pet.id, pet.owner_id)
     }
+
+    const handleEdit = (pet) => {
+        props.editPet(pet.id, pet.owner_id)
+    }
         return (
             <div>
                 <h2>My Pets</h2>
@@ -19,9 +23,10 @@ const Pets = (props) => {
                                 Kind: {pet.kind}<br />
                                 Breed: {pet.breed}<br />
                                 Age: {pet.age}<br />
+                                <button onClick={() => handleEdit(pet)}>Edit</button>
                                 <button onClick={() => handleDelete(pet)}>Delete</button>
                                 <hr />  
-                                <Link to={`/owners/${pet.owner_id}/pets/${pet.id}/todos`}> Your Pet's To-Dos </Link><br />     
+                                <Link to={`/owners/${pet.owner_id}/pets/${pet.id}/todos`}> {pet.name}'s' To-Dos </Link><br />     
                                 <hr />           
                             </div>
                         )}                      

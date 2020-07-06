@@ -8,7 +8,7 @@ import PetForm from '../components/PetForm'
 import Owners from '../components/Owners'
 import Owner from '../components/Owner'
 import Pets from '../components/Pets'
-import Todo from '../components/Todo'
+import Todos from '../components/Todos'
 import Home from '../components/Home'
 import NavBar from '../components/NavBar'
 
@@ -25,10 +25,9 @@ class OwnersContainer extends React.Component {
                 <Switch>
                     <Route exact path='/owners/new' component={OwnerForm} />
                     <Route exact path='/owners/:id/pets/new' component={PetForm} />
-                    <Route exact path='/owners/:id/pets/:id/todos' render={(props) => <Todo {...props} owners={this.props.owners}/>} />
+                    <Route exact path='/pets/:id/todos' render={(props) => <Todos {...props} owners={this.props.owners}/>}/>
                     <Route exact path='/owners/:id' render={(props) => <Owner {...props} owners={this.props.owners}/>} />
-                    <Route exact path='/owners' render= {(props) => <Owners {...props} owners={this.props.owners}/>} />
-                    <Route exact path='/owners/:id/pets/:id' render= {(props) => <Owners {...props} owners={this.props.owners}/>} />             
+                    <Route exact path='/owners' render= {(props) => <Owners {...props} owners={this.props.owners}/>} />      
                     <Route exact path='/' component={Home} />
                 </Switch>
             </div>

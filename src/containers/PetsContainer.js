@@ -1,7 +1,6 @@
 import React from 'react'
 import PetForm from '../components/PetForm'
 import Pets from '../components/Pets'
-import Todo from '../components/Todo'
 
 
 class PetsContainer extends React.Component {
@@ -9,8 +8,8 @@ class PetsContainer extends React.Component {
     render() {
         return (
             <div>
-                <Pets pets={this.props.owner && this.props.owner.pets} owner={this.props.owner}/>
-                <PetForm owner={this.props.owner} />  
+                <Pets pets={this.props.owner && this.props.owner.pets} owner={this.props.owner} todos={this.props.owner && this.props.owner.todos}  />
+                <PetForm owner={this.props.owner} owner={this.props.owner}/>  
             </div>
         )
     }

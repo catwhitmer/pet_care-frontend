@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { deletePet } from '../actions/deletePet'
 import { Route, Link } from 'react-router-dom'
-import Pet from '../components/Pet'
+import Todo from './Todo'
 
 
 const Pets = (props) => {

@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect} from 'react-redux'
+import { Link } from 'react-router-dom'
+
 import TodosContainer from '../containers/TodosContainer'
 
 
@@ -14,12 +16,10 @@ const Todos = (props) => {
     return (
         <div>
         <h1>To-Dos</h1>
-            {props.owners.length  > 0 ? 
-           findTodos().map(todo => <p>
-           <li> {todo.description} - {todo.notes} </li>
-           </p>) : null
-           }
-          
+            {props.owners.length  > 0 ? findTodos().map(todo => 
+                <li> {todo.description} - {todo.notes} </li>) : null}<br />
+                <hr />
+                <Link to={`/owners/${props.match.params.owner_id}/pets/${props.match.params.id}/todos/new`}> Create a New To-Do! </Link>
         </div>
     )
 }

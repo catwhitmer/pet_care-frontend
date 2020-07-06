@@ -1,7 +1,7 @@
 export const addOwner = (formData) => {
 
     return(dispatch) => {
-        fetch('http://localhost:3001/api/v1/owners', {
+        fetch('http://localhost:3000/api/v1/owners', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

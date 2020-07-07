@@ -7,7 +7,7 @@ export const addTodo = (todo, petId) => {
                 'Accept': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify(formData)
+            body: JSON.stringify(todo)
         })
         .then(resp => resp.json())
         .then(pet => dispatch({type: 'ADD_TODO', payload: pet}))

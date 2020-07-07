@@ -23,7 +23,7 @@ const Todos = (props) => {
                 <button onClick={() => handleDelete(pet)}>Delete</button>
                 <br />
                 <hr />
-                 <TodoForm todos={props.owners}/> 
+                <TodoForm todos={props.owners}/> 
         </div>
     )
 }

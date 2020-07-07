@@ -15,7 +15,6 @@ let pet= props.pets && props.pets.filter(pet => pet.id == props.match.params.id)
             Breed: {pet ? pet.breed : null}<br />
             Age: {pet ? pet.age : null}<br />
           </h2>
-        <button onClick={() => this.handleEdit(pet)}>Edit</button>
         <button onClick={() => this.handleDelete(pet)}>Delete</button>
         <hr />
       

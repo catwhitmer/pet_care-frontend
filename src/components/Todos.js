@@ -18,7 +18,6 @@ const Todos = (props) => {
                 <h3>
                 {props.pets.length  > 0 ? findTodos().map(todo => 
                 <li key={todo.id}> {todo.description} - {todo.notes} </li>) : null}
-                    <button onClick={() => this.handleEdit(pet)}>Edit</button>
                     <button onClick={() => this.handleDelete(pet)}>Delete</button>
                 </h3>
                 <hr />

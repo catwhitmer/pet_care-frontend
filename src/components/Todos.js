@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect} from 'react-redux'
-import { Link } from 'react-router-dom'
 
 import TodosContainer from '../containers/TodosContainer'
 import TodoForm from '../components/TodoForm'
@@ -23,7 +22,7 @@ const Todos = (props) => {
                 <button onClick={() => handleDelete(pet)}>Delete</button>
                 <br />
                 <hr />
-                <TodoForm todos={props.owners}/> 
+                <TodoForm owners={props.owners} /> 
         </div>
     )
 }

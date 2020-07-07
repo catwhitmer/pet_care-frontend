@@ -17,7 +17,7 @@ class TodoForm extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.addTodo(this.state, this.props.owner.id, this.props.owners.todos.id)
+        this.props.addTodo(this.state, this.props.pet.id)
         this.setState({
             description: '',
             notes: ''

@@ -1,14 +1,15 @@
-export const addPet = (pet, ownerId) => {
+export const addPet = (formData) => {
 
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/v1/owners/${ownerId}/pets`, {
-            method: 'POST',
+        fetch(`http://localhost:3001/api/v1/pets`, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
-            body: JSON.stringify(pet)
+            method: 'POST',
+            body: JSON.stringify(formData)
         })
         .then(resp => resp.json())
-        .then(owner => dispatch({type: 'ADD_PET', payload: owner}))
+        .then(pet => dispatch({type: 'ADD_PET', payload: pet}))
     }
 }

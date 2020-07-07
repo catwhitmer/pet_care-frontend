@@ -1,14 +1,15 @@
-export const addTodo = (todo, ownerId, petId) => {
+export const addTodo = (todo, petId) => {
 
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/v1/owners/${ownerId}/pets/${petId}/todos`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
+        fetch(`http://localhost:3001/api/v1/pets/${petId}/todos`, {
+             headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
-            body: JSON.stringify(todo)
+            method: 'POST',
+            body: JSON.stringify(formData)
         })
         .then(resp => resp.json())
-        .then(owner => dispatch({type: 'ADD_TODO', payload: owner}))
+        .then(pet => dispatch({type: 'ADD_TODO', payload: pet}))
     }
 }

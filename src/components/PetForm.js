@@ -21,7 +21,7 @@ class PetForm extends React.Component {
     
     handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.addPet(this.state, this.props.owner.id)
+        this.props.addPet(this.state)
         this.setState({
             name: '',
             kind: '',

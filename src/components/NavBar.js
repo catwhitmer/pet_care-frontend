@@ -5,7 +5,7 @@ const NavBar = (props) => {
 
     return (
         <div className='NavBar'>
-          <Link to='/'>Home</Link> - <Link to='/owners'>Sign In</Link> - <Link to='/owners/new'>Sign Up</Link>
+          <Link to='/'>Home</Link> - <Link to='/pets'>All Pets</Link> - <Link to='/pets/new'>Add A New Pet</Link>
         </div>
     )
 

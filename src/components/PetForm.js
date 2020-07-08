@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+
 import { addPet } from '../actions/addPet'
 
 
@@ -22,6 +24,7 @@ class PetForm extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.props.addPet(this.state)
+        this.props.history.push('/pets')
         this.setState({
             name: '',
             species: '',
@@ -51,4 +54,4 @@ class PetForm extends React.Component {
     }
 }
 
-export default connect(null, { addPet })(PetForm)
+export default withRouter(connect(null, { addPet })(PetForm))

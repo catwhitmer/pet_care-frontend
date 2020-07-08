@@ -1,15 +1,9 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { Route, Link } from 'react-router-dom'
-import { deletePet } from '../actions/deletePet'
+import { Link } from 'react-router-dom'
+
 import Pet from './Pet'
 
 const Pets = (props) => {
-
-    const handleDelete = (pet) => {
-        props.deletePet(pet.id)
-    }
-
 
     return (
         <div>
@@ -17,11 +11,10 @@ const Pets = (props) => {
                 <h1>My Pets!</h1>
                     {props.pets.map(pet => 
                         <h3 key={pet.id}>
-                            <Link to={`/pets/${pet.id}`}> {pet.name} </Link> <br />
-                            <button onClick={() => handleDelete(pet)}>Delete</button>
+                            <Link to={`/pets/${pet.id}`}> {pet.name} </Link>
                         </h3>)}
         </div>
     )
 }
 
-export default connect(null, { deletePet })(Pets)
+export default Pets

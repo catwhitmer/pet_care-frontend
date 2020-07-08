@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import TodosContainer from '../containers/TodosContainer'
 
 
 const Pet = (props) => {
@@ -15,8 +16,7 @@ const Pet = (props) => {
             Age: {pet ? pet.age : null}<br />
           </h2>
         <hr />
-      
-        <Link to={`/pets/${props.match.params.id}/todos`}> {pet ? pet.name : null}'s To-Dos' </Link>
+        <TodosContainer pet={pet}/>
       </div>
     )
 }

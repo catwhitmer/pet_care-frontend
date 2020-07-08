@@ -17,7 +17,7 @@ const Pets = (props) => {
                 <h1>My Pets!</h1>
                     {props.pets.map(pet => 
                         <h3 key={pet.id}>
-                            <Link to={`/pets/${pet.id}`}> {pet.name} </Link> 
+                            <Link to={`/pets/${pet.id}`}> {pet.name} </Link> <br />
                             <button onClick={() => handleDelete(pet)}>Delete</button>
                         </h3>)}
         </div>

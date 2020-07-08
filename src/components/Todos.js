@@ -6,13 +6,7 @@ import TodoForm from '../components/TodoForm'
 
 
 const Todos = (props) => {
-
-    const findTodos = () => {
-       return (
-        props.pets.find(pet => pet.id == props.match.params.id).todos.filter(todo => todo.pet_id == props.match.params.id)
-       )
-    }
-
+    
     const handleDelete = (pet) => {
         props.deleteTodo()
     }
@@ -21,12 +15,12 @@ const Todos = (props) => {
         <div>
             <h1>To-Dos</h1>
                 <h3>
-                    {props.pets.length  > 0 ? findTodos().map(todo => 
-                    <li key={todo.id}> {todo.description} - {todo.notes} </li>) : null}
-                    <button onClick={() => handleDelete(pet)}>Delete</button>
+                    {props.todos && props.todos.map(todo => 
+                    <li key={todo.id}> {todo.description} - {todo.notes} <br />
+                        <button onClick={() => handleDelete(pet)}>Delete</button>
+                    </li>)}
+                    
                 </h3>
-                <hr />
-                    <TodoForm pets={props.pets} />
         </div>
     )
 }

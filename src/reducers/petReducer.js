@@ -15,23 +15,23 @@ export default function petReducer(state = {pets: []}, action) {
              })
              return {...state, pets: pets}
         case 'ADD_TODO':
-            let petsTwo = state.pets.map(pet => {
+            let updatedPets = state.pets.map(pet => {
                 if (pet.id === action.payload.id) {
                     return action.payload
                 } else {
                     return pet
                 }
              })
-             return {...state, pets: petsTwo}
+             return {...state, pets: updatedPets}
         case 'DELETE_TODO':
-            let petsThree = state.pets.map(pet => {
+            let updatedTodo = state.pets.map(pet => {
                 if (pet.id === action.payload.id) {
                     return action.payload
                 } else {
                     return pet
                 }
              })
-             return {...state, pets: petsThree}
+             return {...state, pets: updatedTodo}
         default:
             return state
     }

@@ -7,12 +7,12 @@ const Pets = (props) => {
 
     return (
         <div>
-            <h3 className='pets'></h3>
+            <div className='pets'></div>
                 <h1>My Pets!</h1>
                     {props.pets.map(pet => 
-                        <h3 key={pet.id}>
+                        <h2 key={pet.id}>
                             <Link to={`/pets/${pet.id}`}> {pet.name} </Link>
-                        </h3>)}
+                        </h2>)}
         </div>
     )
 }

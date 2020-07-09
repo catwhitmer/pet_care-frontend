@@ -14,7 +14,7 @@ const Pet = (props) => {
   }
 
 
-  let pet= props.pets && props.pets.filter(pet => pet.id == props.match.params.id)[0]
+  let pet = props.pets && props.pets.filter(pet => pet.id == props.match.params.id)[0]
 
     return (
       <div>
@@ -31,4 +31,10 @@ const Pet = (props) => {
     )
 }
 
-export default withRouter(connect(null, {deletePet})(Pet))
+const mapStateToProps = state => {
+    return {
+        pet: state.pet
+    }
+}
+
+export default withRouter(connect(mapStateToProps, {deletePet})(Pet))

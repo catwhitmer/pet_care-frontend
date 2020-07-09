@@ -15,7 +15,7 @@ const Todos = (props) => {
                 <h3>
                     {props.todos && props.todos.map(todo => 
                     <li key={todo.id}> {todo.description} - {todo.notes} <br />
-                        <button onClick={() => handleDelete(todo)}>Delete</button>
+                        <button className="button" onClick={() => handleDelete(todo)}>Delete</button>
                     </li>)}
                     
                 </h3>

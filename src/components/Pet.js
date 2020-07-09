@@ -18,12 +18,12 @@ const Pet = (props) => {
 
     return (
       <div>
-        <h1>{pet ? pet.name : null}!</h1>
+        <h1>{pet ? pet.name : null}'s Page</h1>
           <h2>
             Species: {pet ? pet.species : null}<br />
             Breed: {pet ? pet.breed : null}<br />
             Age: {pet ? pet.age : null}<br />
-            <button onClick={() => handleDelete(pet)}>Delete</button>
+            <button className="button" onClick={() => handleDelete(pet)}>Delete</button>
           </h2>
         <hr />
         <TodosContainer pet={pet}/>

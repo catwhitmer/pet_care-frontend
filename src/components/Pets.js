@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import Pet from './Pet'
 
 const Pets = (props) => {
 
@@ -17,4 +17,11 @@ const Pets = (props) => {
     )
 }
 
-export default Pets
+const mapStateToProps = state => {
+    return {
+        pets: state.pets
+    }
+}
+
+
+export default connect(mapStateToProps) (Pets)

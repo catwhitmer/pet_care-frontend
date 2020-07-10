@@ -31,10 +31,5 @@ const Pet = (props) => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        pet: state.pet
-    }
-}
 
-export default withRouter(connect(mapStateToProps, {deletePet})(Pet))
+export default withRouter(connect(null, {deletePet})(Pet))

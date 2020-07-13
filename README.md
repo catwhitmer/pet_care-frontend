@@ -1,68 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pet Care app
 
-## Available Scripts
+This app provides a database and web interface for users to:
 
-In the project directory, you can run:
+-Create a pet which allows the user to see all the pets, and allows the user to manage the pets. 
+-A user can create and delete pets. 
+-A user can assign To-Dos to each pet.
+-A user can create and delete To-Dos.
+-Pet inputs are validated by name, species, breed, and age presence. 
+-To-Dos are validated by description and notes presence.
+-Also the pet's id must be present as well.
 
-### `yarn start`
+This backend was built with Rails, and with the use of ActiveRecord for storing information in a database. The frontend was build using React and Redux.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Usage Backend 1.clone repository 2.bundle install 3.rake db:migrate 4.rails s -p 30001 5.Then navigate to localhost:3001/pets in your browser to see the API.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Usage Fontend 1.clone repository 2. npm start to see it in action.
 
-### `yarn test`
+Contributing Bug reports and pull requests are welcome on GitHub at https://github.com/catwhitmer/pet_care-frontend and https://github.com/catwhitmer/pet_care-backend. This project is intended to foster collaboration; contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+License This software is available as open source under the terms of the MIT License.

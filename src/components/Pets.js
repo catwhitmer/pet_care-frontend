@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import Like from '../components/Like'
+
 
 const Pets = (props) => {
 
@@ -12,6 +14,7 @@ const Pets = (props) => {
                     {props.pets.map(pet => 
                         <h2 key={pet.id}>
                             <Link to={`/pets/${pet.id}`}> {pet.name} </Link>
+                            <Like likeId={pet.id}/>
                         </h2>)}
         </div>
     )

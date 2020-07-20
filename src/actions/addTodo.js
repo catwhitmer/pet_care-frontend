@@ -2,7 +2,7 @@ export const addTodo = (todo, petId) => {
 
     return (dispatch) => {
         fetch(`http://localhost:3001/api/v1/pets/${petId}/todos`, {
-             headers: {
+            headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },

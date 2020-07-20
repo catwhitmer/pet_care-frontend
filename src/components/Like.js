@@ -7,16 +7,13 @@ class Like extends React.Component {
     }
 
     addLike = () => {
-        const newCount = this.state.count + 1
-        this.setState({
-            count: newCount
-        })
+        this.setState({count: this.state.count + 1})
     }
 
     render() {
         return (
             <div>
-                <button onClick={this.addLike} id={this.props.likeId}>Likes: {this.state.count}</button>
+                <button onClick={this.addLike} id={this.props.likeId}> Likes: {this.state.count} </button>
             </div>
         )
     }

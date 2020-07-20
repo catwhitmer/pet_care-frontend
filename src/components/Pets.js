@@ -17,20 +17,11 @@ const Pets = (props) => {
         setToggleOn(!toggleOn)
     }
 
-    const displayPets = () => {  //return original or sorted, false = unsorted true = sorted , props.pets = array of objects
+    const displayPets = () => {  //return original or sorted, false = unsorted, true = sorted , props.pets = array of objects
         if (toggleOn){ 
-             const sortedPets = props.pets.sort(function(a, b) {
-                let nameA = a.name
-                let nameB = b.name
-                if (nameA < nameB) {
-                    return -1
-                }
-                if (nameA > nameB) {
-                    return 1
-                }
-                    return 0
-            })
-            return sortedPets
+            let sortedPets = props.pets
+            let newPets = sortedPets.slice().sort((a,b) => a.name < b.name ? -1 : (a.name > b.name ? 1 : 0))
+            return newPets
         } else {
             return props.pets
         }

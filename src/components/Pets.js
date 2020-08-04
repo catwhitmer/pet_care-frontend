@@ -31,6 +31,7 @@ const Pets = (props) => {
         <div>
             <div className='pets'></div>
                 <h1>My Pets!</h1>
+                <h3>Sort your Pets alphabetically!</h3>
                     <button onClick={handleClick}> Toggle Sort: {toggleOn ? "ON" : "OFF"} </button>
                         <br></br>
                         {displayPets().map(pet => 
